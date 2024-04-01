@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Assignment</title>
+
+    <style>
+        p {
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button {
+            cursor: pointer;
+            color: rgb(9, 9, 9);
+            font-size: 13px;
+            background-color: rgb(90, 189, 102);
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contianer">
+        <h3>Country: </h3>
+        <p id="country"> CANADA </p>
+
+        <h3>Capital: </h3>
+        <p id="capital">OTTAWA</p>
+        <button id="hdieCapitalBtn" onclick="hidecapital()">Hide capital name</button>
+        <button id="showCapitalBtn" onclick="showCapital()"> Show capital name</button>
+        <button id="toggle" onclick="toggle()">Toggle</button>
+
+        <p id="hover" onmouseover="changeColorHover()" >Hover on this paragraph for yellow</p>
+        
+        <p id="clickParagraph" onclick="changeColor()">Click on this paragraoh for green example.</p>
+    </div>
+
+    <script>
+        // hide capital, on click button
+        function hidecapital(){
+            document.getElementById("capital").style.display = "none";
+        }
+        // show capital, on click button
+        function showCapital(){
+            document.getElementById("capital").style.display = "block";
+        }
+
+        function toggle(){
+            if (document.getElementById("capital").style.display == "none") {  // if capital is hidden
+                document.getElementById("capital").style.display = "block";    // show capital
+            } 
+            // if capital is shown, hide it
+            else { 
+                document.getElementById("capital").style.display = "none";     
+            }
+        }
+
+        // Change color, on click
+        function changeColor(){
+            document.getElementById("clickParagraph").style.backgroundColor = "green";
+        }
+
+        // Change color, on hover
+        function changeColorHover(){
+            document.getElementById("hover").style.backgroundColor = "yellow";
+        }
+
+    </script>
+</body>
+</html>
